@@ -1,0 +1,18 @@
+.new-album {
+  flex-direction: column;
+  display: flex;
+  width: 350px;
+}
+
+.coverPhoto {
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.album-actions {
+  align-self: flex-end;
+}
+
+.confirm-button {
+  margin-right: 10px;
+}

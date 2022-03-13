@@ -1,0 +1,24 @@
+<div class="new-album">
+  <img class="coverPhoto" [src]="album.photoUrl" width="100">
+  <mat-form-field>
+    <input matInput #input="matInput" name="photoUrl" [(ngModel)]="album.photoUrl" type="text" placeholder="Photo URL">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label for="albumSearch">
+      Title
+    </mat-label>
+    <input matInput #input="matInput" name="title" [(ngModel)]="album.title" type="text">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Year</mat-label>
+    <input matInput name="artist" [(ngModel)]="album.year" type="text">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Artist</mat-label>
+    <input matInput name="artist" [(ngModel)]="album.artist" type="text">
+  </mat-form-field>
+    <div class="album-actions">
+    <button class="confirm-button" mat-raised-button mat-dialog-close (click)="createNewAlbum(album)">Confirm</button>
+    <button class="cancel-button" mat-raised-button mat-dialog-close color="warn">Cancel</button>
+  </div>
+</div>

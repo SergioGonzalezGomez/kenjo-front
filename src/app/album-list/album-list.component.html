@@ -1,0 +1,28 @@
+<div class="main-body">
+  <!-- Album component -->
+    <mat-card class="album-container" *ngFor="let album of albumList; let i = index">
+      <div class="album-actions">
+        <button class="edition-button" mat-mini-fab>
+          <mat-icon class="edit-icon">edit</mat-icon>
+        </button>
+        <button class="edition-button" mat-mini-fab (click)="deleteAlbum(album, i)">
+          <mat-icon class="edit-icon">delete</mat-icon>
+        </button>
+      </div>
+      <img [src]="album.photoUrl" alt="title" width="100">
+      <mat-form-field>
+        <mat-label for="albumSearch">
+          Title
+        </mat-label>
+        <input matInput #input="matInput" name="title" [ngModel]="album.title" type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Year</mat-label>
+        <input matInput name="artist" [ngModel]="album.year" type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Artist</mat-label>
+        <input matInput name="artist" [ngModel]="album.artist" type="text">
+      </mat-form-field>
+    </mat-card>
+</div>

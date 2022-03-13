@@ -1,0 +1,39 @@
+.main-body {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.album-container {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  border: 1px solid grey;
+}
+
+.album-actions {
+  align-self: end;
+}
+
+.edition-button {
+  background-color: #c0f4e4;
+  margin-right: 5px;
+  border-radius: 20px;
+  padding: 2px;
+  border: 1px solid #c9c8c8
+}
+
+.edit-icon {
+  position: relative;
+  top: -4px;
+}
