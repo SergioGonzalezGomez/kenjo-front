@@ -11,8 +11,11 @@ export class AlbumListComponent implements OnInit {
   constructor( private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get<any[]>('http://localhost:3000/album').subscribe((data: Array<any>) =>
-      this.albumList = data
+    this.http.get<any[]>('http://localhost:3000/album').subscribe((data: Array<any>) =>{
+      this.albumList = data;
+      console.log(data)
+    }
+    
     );
   }
 
