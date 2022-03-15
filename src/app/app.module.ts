@@ -14,12 +14,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AlbumListComponent } from './album-list/album-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewAlbumDialog } from 'src/app/new-album-dialog/new-album.dialog';
+import { UpdateAlbumDialogComponent } from './update-album-dialog/update-album-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlbumListComponent,
     NewAlbumDialog,
+    UpdateAlbumDialogComponent,
   ],
   imports: [
     BrowserModule,
