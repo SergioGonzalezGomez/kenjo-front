@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   constructor( public dialog: MatDialog )  {}
 
   ngOnInit(): void {
+    
   }
 
   openDialogNewAlbum() {

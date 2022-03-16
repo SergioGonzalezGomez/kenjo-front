@@ -8,8 +8,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AlbumListComponent } from './album-list/album-list.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,6 +23,7 @@ import { UpdateAlbumDialogComponent } from './update-album-dialog/update-album-d
     AlbumListComponent,
     NewAlbumDialog,
     UpdateAlbumDialogComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,9 @@ import { UpdateAlbumDialogComponent } from './update-album-dialog/update-album-d
     FormsModule,
     HttpClientModule,
     MatDialogModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    
     RouterModule.forRoot([{
       path: '', component: AlbumListComponent
     }
