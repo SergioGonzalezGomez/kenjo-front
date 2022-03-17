@@ -31,19 +31,15 @@ export class ServiceService {
   getAlbum() {
    return this.http.get<any[]>('http://localhost:3000/album')
   }
-  updateAlbum(album: any): Observable<any> {
+  updateAlbum(album:any):Observable<any>{
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
-    return this.http.put<any>(`http://localhost:3000/album/${album.id}`, JSON.stringify(album), httpOptions)
-    .pipe(
-      tap(() => {this._refresh$.next();
+    return this.http.put<any>(`http://localhost:3000/album/${album.id}`, JSON.stringify(album), httpOptions).pipe(tap(() => {this._refresh$.next();
       })
       )
   }
-
-
 }
 

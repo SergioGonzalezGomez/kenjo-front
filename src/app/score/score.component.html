@@ -1,0 +1,7 @@
+<ngb-rating [(rate)]="selected" [max]="5" >
+    <ng-template let-fill="fill" let-index="index">
+    <span class="star" [class.filled]="fill === 100" (click)="onSelect()">&#9733;</span>
+  </ng-template>
+</ngb-rating>
+        <hr>
+  <pre>Rate: <b>{{selected}}</b></pre>

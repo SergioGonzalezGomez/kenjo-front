@@ -1,21 +1,21 @@
 <div class="new-album" [formGroup]="albumForm">
   <img class="coverPhoto" [src]="album.photoUrl" width="100">
   <mat-form-field>
-    <input matInput #input="matInput" name="photoUrl" [(ngModel)]="album.photoUrl" type="text" placeholder="Photo URL" >
+    <input matInput #input="matInput" name="photoUrl" formControlName="photoUrl" type="text" placeholder="Photo URL" >
   </mat-form-field>
   <mat-form-field>
     <mat-label for="albumSearch">
       Title
     </mat-label>
-    <input matInput #input="matInput" name="title" [(ngModel)]="album.title" type="text" formControlName="title">
+    <input matInput #input="matInput" name="title" formControlName="title" type="text">
   </mat-form-field>
   <mat-form-field>
     <mat-label>Year</mat-label>
-    <input matInput name="year" [(ngModel)]="album.year" type="text" formControlName="year"> <!--Ponia artist en vez de year en el name=-->
+    <input matInput name="year" formControlName="year" type="text"> <!--I changed the name=artist to name=year-->
   </mat-form-field>
   <mat-form-field>
     <mat-label>Artist</mat-label>
-    <input matInput name="artist" [(ngModel)]="album.artist" type="text" formControlName="artist">
+    <input matInput name="artist" formControlName="artist" type="text">
   </mat-form-field>
   <!-- <mat-form-field>
   <mat-label>Score</mat-label>

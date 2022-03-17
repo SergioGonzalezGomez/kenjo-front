@@ -16,6 +16,9 @@ import { AlbumListComponent } from './album-list/album-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewAlbumDialog } from 'src/app/new-album-dialog/new-album.dialog';
 import { UpdateAlbumDialogComponent } from './update-album-dialog/update-album-dialog.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ScoreComponent } from './score/score.component';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { UpdateAlbumDialogComponent } from './update-album-dialog/update-album-d
     AlbumListComponent,
     NewAlbumDialog,
     UpdateAlbumDialogComponent,
+    ScoreComponent,
     
   ],
   imports: [
@@ -33,15 +37,15 @@ import { UpdateAlbumDialogComponent } from './update-album-dialog/update-album-d
     MatCardModule,
     MatIconModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
     MatFormFieldModule,
-    ReactiveFormsModule,
-    
     RouterModule.forRoot([{
       path: '', component: AlbumListComponent
     }
   ]),
+     NgbModule,
 ],
   providers: [],
   bootstrap: [AppComponent]

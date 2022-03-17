@@ -16,7 +16,7 @@ export class NewAlbumDialog implements OnInit {
     year: 1900,
     artist: '',
     photoUrl: '', 
-    score: ';'
+    score: ''
   };
   albumForm!: FormGroup;
   suscription?: Subscription;
@@ -36,13 +36,22 @@ export class NewAlbumDialog implements OnInit {
       
     })
   }
-
   createNewAlbum(album: any): void {
-    this.serviceService.createNewAlbum(this.album).subscribe((data: any) => {
-      this.album = data;
-    })
+   album = {
+    title: this.albumForm.value.title,
+    year: this.albumForm.value.year,
+    artist: this.albumForm.value.artist,
+    photoUrl: this.albumForm.value.photoUrl,
+    score: this.albumForm.value.score
+   }
+   
+
+    this.serviceService.createNewAlbum(album).subscribe();
   }
-/*   createNewAlbum(album: any) {
+
+
+/*FUNCTION WITHOUT THE SERVICE  
+createNewAlbum(album: any) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
